@@ -9,8 +9,12 @@ Site pédagogique statique en français, destiné à expliquer la chaîne mécan
 - Explication illustrative du rapport vitesse/couple des poulies.
 - Vidéo de démonstration manuelle de 17,6 secondes, sans audio.
 - Données moteur et distinction explicite entre observations, documentation et hypothèses.
+- Seconde vue interactive en perspective 3D, avec rotation, vues prédéfinies, sélection des organes et vue éclatée.
+- Photographie avec repères, identification prudente des variateurs RTS et afficheurs MICRA, et limites de la mesure de couple.
+- Calculateur illustratif de cycle marche/pause, sans présumer du programme installé.
+- Fiche de préparation à la conception : décisions, questions, notes conservées dans le navigateur, copie et impression.
 
-Les sources de l’analyse sont 37 photos, une vidéo, « Descriptif banc.docx », « Banc usure denture.pptx » et les courbes constructeur Parvex RX. Les documents internes bruts ne sont pas inclus. Les caractéristiques indiquées ne constituent pas une validation de remise en service.
+Les sources de l’analyse sont 37 photos, une vidéo, « Descriptif banc.docx », « Banc usure denture.pptx », le scénario « ED Essai.xlsx » et les notices constructeur citées sur le site. Les documents internes bruts ne sont pas inclus. Les caractéristiques indiquées ne constituent pas une validation de remise en service. La vue 3D est un schéma de principe sans cotes de fabrication ; les procédures MAGTROL concernent un autre banc et sont distinguées explicitement.
 
 ## Aperçu local
 
