@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta name="description" content="Comprendre le banc d’usure de denture : moteurs, courroies, broches, charge et réglages. Une visite illustrée et interactive du banc développé en 1997.">
+  <title>Comprendre le banc d’usure de denture</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="explorer.js?v=2" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="header">
+    <a class="brand" href="#accueil" aria-label="Banc denture, accueil"><span class="brand-mark">bd.</span><span>BANC<br>DENTURE</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" aria-label="Navigation principale">
+      <a href="#principe">Fonctionnement</a><a href="#composants">Composants</a><a href="#reglages">Réglages</a><a href="#video">Vidéo</a><a href="#reperes">Repères</a>
+    </nav>
+    <span class="header-note">VISITE TECHNIQUE</span>
+  </header>
+  <main id="main">
+    <section class="hero section" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> BANC D’ESSAI DÉVELOPPÉ EN 1997</p>
+        <h1>Comprendre le banc d’usure de <em>denture.</em></h1>
+        <p class="intro">Suivre le mouvement des moteurs jusqu’aux dents. Comprendre comment le banc met les engrenages à l’épreuve.</p>
+        <a class="button" href="#principe">Explorer le fonctionnement <span aria-hidden="true">↗</span></a>
+        <div class="hero-facts"><p><strong>2</strong><span>motorisations</span></p><p><strong>0–125 <small>mm</small></strong><span>décalage annoncé des axes</span></p></div>
+      </div>
+      <figure class="hero-photo"><img src="assets/vue-generale.jpg" alt="Vue d’ensemble du banc mécanique dans son enceinte transparente" width="1600" height="2133" fetchpriority="high"><figcaption><span>01 / LE BANC</span><span>Vue réelle de l’installation</span></figcaption></figure>
+    </section>
+
+    <section class="section principle" id="principe">
+      <div class="section-heading"><p class="eyebrow">01 / LE PRINCIPE</p><h2>Faire tourner.<br><em>Faire travailler les dents.</em></h2><p>Une machine électrique entraîne les pièces. Une seconde peut opposer une charge. Les dents transmettent alors un effort à chaque passage dans la zone de contact.</p></div>
+      <div class="explorer">
+        <div class="explorer-top"><span class="eyebrow">CHAÎNE MÉCANIQUE SIMPLIFIÉE</span><button id="motion-toggle" class="button button-small" type="button" aria-pressed="false">Animer le schéma</button></div>
+        <div id="mechanism-svg"></div>
+        <div class="mechanism-legend"><span>Entraînement</span><span>Contact entre les dentures</span><span>Charge résistante</span></div>
+        <p class="fine">Schéma simplifié — valeurs relatives, aucune mesure du banc. L’affectation exacte des rôles d’entraînement et de charge à M1 ou M2 reste à confirmer.</p>
+        <div class="steps" aria-label="Étapes de fonctionnement">
+          <button type="button" data-step="montage" aria-pressed="true"><span>01</span> Monter</button>
+          <button type="button" data-step="reglage" aria-pressed="false"><span>02</span> Régler</button>
+          <button type="button" data-step="entrainement" aria-pressed="false"><span>03</span> Entraîner</button>
+          <button type="button" data-step="charge" aria-pressed="false"><span>04</span> Charger</button>
+          <button type="button" data-step="observation" aria-pressed="false"><span>05</span> Observer</button>
+        </div>
+        <p id="step-description" class="step-description" aria-live="polite">On serre les axes portant les roues d’essai dans les porte-pinces. Les deux pièces sont positionnées pour permettre leur contact.</p>
+      </div>
+      <div class="principle-bottom"><p><strong>Pourquoi deux moteurs ?</strong> Pour dissocier la mise en rotation et l’effort transmis. Une roue qui tourne presque à vide sollicite peu ses dents. Une charge résistante les fait travailler.</p><p><strong>Pourquoi des courroies ?</strong> Elles relient les moteurs aux broches. Les poulies permettent d’adapter la transmission ; la zone d’essai se trouve entre les pièces montées sur les broches.</p></div>
+    </section>
+
+    <section class="components-wrap" id="composants">
+      <div class="section components">
+        <div class="section-heading"><p class="eyebrow">02 / LA MACHINE RÉELLE</p><h2>Reconnaître<br><em>chaque composant.</em></h2><p>Sélectionne un élément pour voir sa place dans le banc et comprendre sa fonction.</p></div>
+        <div class="component-view">
+          <figure class="component-photo"><button class="zoom-button" type="button" data-zoom="assets/moteurs.jpg" aria-label="Agrandir la photo du composant"><img id="component-image" src="assets/moteurs.jpg" alt="Les deux moteurs M1 et M2 et leurs transmissions par courroies" width="1600" height="1200" loading="lazy"><span class="zoom-label">Agrandir ↗</span></button><figcaption id="component-caption">Moteurs M1 et M2, avec transmissions par courroies crantées.</figcaption></figure>
+          <div class="component-copy">
+            <div class="component-list" aria-label="Choisir un composant"><button type="button" data-component="moteurs" aria-pressed="true"><span>01</span> Les moteurs <span aria-hidden="true">↗</span></button><button type="button" data-component="courroies" aria-pressed="false"><span>02</span> Les transmissions <span aria-hidden="true">↗</span></button><button type="button" data-component="broche" aria-pressed="false"><span>03</span> Les porte-pinces <span aria-hidden="true">↗</span></button><button type="button" data-component="dentures" aria-pressed="false"><span>04</span> La zone d’essai <span aria-hidden="true">↗</span></button><button type="button" data-component="pupitre" aria-pressed="false"><span>05</span> Le pupitre <span aria-hidden="true">↗</span></button></div>
+            <div id="component-description" class="component-description" aria-live="polite"><p class="eyebrow">DEUX MACHINES ÉLECTRIQUES IDENTIQUES</p><h3>Les moteurs</h3><p>Les cylindres noirs repérés M1 et M2 sont des servomoteurs à courant continu de la famille Parvex RX630E. Chaque moteur dispose de son variateur et d’un retour tachymétrique pour la vitesse.</p><p class="fine">Le descriptif distingue un ensemble M1 fixe et un ensemble M2 mobile. Cela ne suffit pas à attribuer avec certitude le rôle moteur ou frein à chacun.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section adjustments" id="reglages">
+      <div class="section-heading"><p class="eyebrow">03 / LES RÉGLAGES</p><h2>Adapter le banc<br><em>à l’essai.</em></h2><p>La position des axes définit la géométrie du montage. Les poulies adaptent la vitesse et le couple disponibles aux broches.</p></div>
+      <div class="adjustment-grid">
+        <div class="geometry"><p class="eyebrow">POSITION DES AXES</p><div class="dimension-value">0–125 <span>mm</span></div><p>Décalage transversal annoncé dans le descriptif. M1 est fixe ; l’ensemble M2 est mobile.</p><dl><div><dt>Espace entre mandrins, b</dt><dd>Inférieur à 15 mm</dd></div><div><dt>Hauteur disponible annoncée</dt><dd>200 mm</dd></div><div><dt>Cote C du schéma</dt><dd>110 mm · fonction à préciser</dd></div></dl><p class="fine">La cote b ne représente pas le jeu entre les dents. Ces valeurs documentaires ne constituent pas une vérification de la course ou de la précision du banc.</p></div>
+        <div class="ratio"><p class="eyebrow">EFFET D’UN RAPPORT DE POULIES</p><h3>Plus de vitesse,<br>moins de couple.</h3><label for="speed-ratio">Rapport illustratif vitesse broche / vitesse moteur</label><input id="speed-ratio" type="range" min="0.5" max="2" step="0.25" value="1"><div class="range-labels"><span>× 0,5</span><span>× 1</span><span>× 2</span></div><div class="ratio-results" aria-live="polite"><p><output id="ratio-speed" for="speed-ratio">100 %</output><span>vitesse relative à la broche</span></p><p><output id="ratio-torque" for="speed-ratio">100 %</output><span>couple relatif disponible</span></p></div><p class="fine">À vitesse et couple moteur identiques, hors pertes. Les valeurs sont normalisées par rapport à une transmission 1:1. Elles ne donnent ni les rapports montés ni les capacités réelles du banc.</p></div>
+      </div>
+      <div class="use-cases"><p class="eyebrow">MONTAGES PRÉVUS PAR LE DESCRIPTIF</p><p>Dentures extérieures droites ou hélicoïdales <span>·</span> Dentures intérieures avec adaptateur <span>·</span> Cardan avec décalage a = 0</p></div>
+    </section>
+
+    <section class="video-wrap" id="video"><div class="section video-section">
+      <div class="video-player"><video controls playsinline preload="metadata" poster="assets/video-poster.jpg" aria-label="Démonstration de rotations manuelles sur le banc"><source src="assets/video-banc.mp4" type="video/mp4"><track kind="captions" src="video-description.vtt" srclang="fr" label="Description des gestes" default>Votre navigateur ne peut pas lire la vidéo. <a href="assets/video-banc.mp4">Ouvrir la vidéo</a>.</video></div>
+      <div class="video-copy"><p class="eyebrow">04 / VOIR LA MÉCANIQUE</p><h2>Le mouvement,<br><em>à la main.</em></h2><p>Cette séquence de 17,6 secondes montre les poulies, les arbres et l’accouplement manipulés manuellement.</p><ol class="video-chapters"><li><button type="button" data-time="0"><span>00:00</span> Poulie et courroie</button></li><li><button type="button" data-time="9"><span>00:09</span> Arbre et accouplement</button></li><li><button type="button" data-time="12.5"><span>00:12</span> Seconde transmission</button></li></ol><p class="fine">La vidéo montre la liaison mécanique. Elle ne démontre pas un essai motorisé sous charge. La version présentée est sans audio.</p></div>
+    </div></section>
+
+    <section class="section wear"><div class="section-heading"><p class="eyebrow">05 / COMPRENDRE L’USURE</p><h2>Ce que l’essai<br><em>permet d’étudier.</em></h2><p>Les contacts répétés entre les dents sollicitent leur surface. Pour comparer des dentures, les conditions de chaque essai doivent être définies et documentées.</p></div><div class="wear-sequence"><article><span class="sequence-number">01</span><h3>Avant l’essai</h3><p>Identifier les matériaux et la géométrie. Photographier ou mesurer l’état initial des dents.</p></article><article><span class="sequence-number">02</span><h3>Pendant l’essai</h3><p>Définir la vitesse, la charge, la durée et le cycle. Suivre les afficheurs et consigner les conditions.</p></article><article><span class="sequence-number">03</span><h3>Après l’essai</h3><p>Comparer les surfaces, dimensions ou profils. Rechercher une évolution de l’usure ou des dommages.</p></article></div><p class="wear-note">Les éléments disponibles ne montrent pas de mesure automatique de l’usure. La méthode de mesure et les critères d’acceptation doivent être définis pour chaque campagne.</p></section>
+
+    <section class="section references" id="reperes"><div class="section-heading"><p class="eyebrow">06 / LES REPÈRES TECHNIQUES</p><h2>Les données.<br><em>Et leurs limites.</em></h2></div><div class="reference-grid"><div><h3>Motorisation identifiée</h3><table><caption class="sr-only">Données lues sur les plaques moteurs</caption><tbody><tr><th scope="row">Famille moteur</th><td>Parvex RX630E · courant continu</td></tr><tr><th scope="row">Référence lue</th><td>RX630ER1100</td></tr><tr><th scope="row">Tension indiquée</th><td>134 V</td></tr><tr><th scope="row">Courant I₀</th><td>16 A</td></tr><tr><th scope="row">Couple M₀ à basse vitesse</th><td>7,8 Nm</td></tr><tr><th scope="row">Vitesse nominale indiquée</th><td>2 400 tr/min</td></tr><tr><th scope="row">Retour tachymétrique</th><td>6 mV / (tr/min)</td></tr></tbody></table><p class="fine">M₀ et la vitesse nominale sont deux caractéristiques distinctes. On ne peut pas conclure que 7,8 Nm sont disponibles en continu à 2 400 tr/min. Le couple aux pièces dépend aussi des poulies et des pertes.</p></div><div class="evidence"><h3>Ce qui reste à confirmer</h3><ul><li>L’affectation précise des fonctions entraînement et charge à M1 et M2.</li><li>Le mode de mesure du couple et son étalonnage.</li><li>Les rapports des poulies installées et les limites sous charge.</li><li>La programmation exacte des cycles et le fonctionnement électrique actuel.</li></ul><details><summary>Sources de cette visite</summary><p>Analyse de 37 photographies prises le 9 avril 2026 et d’une vidéo de 17,6 secondes, croisées avec « Descriptif banc.docx » et « Banc usure denture.pptx ».</p><p>La présentation décrit les objectifs de remise en route et indique une partie électrique non testée au moment de sa rédaction. Cette visite explique le principe du banc ; elle ne valide pas sa remise en service.</p><a href="https://www.parker.com/content/dam/Parker-com/Literature/Electromechanical-Europe/Parvex/RX-motor-curves_EN.pdf" target="_blank" rel="noopener noreferrer">Consulter les courbes constructeur Parvex RX ↗</a></details><p class="fine">Les observations, les données documentaires et les hypothèses de fonctionnement sont distinguées dans les explications.</p></div></div></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#accueil"><span class="brand-mark">bd.</span><span>BANC<br>DENTURE</span></a><p>Une visite pour comprendre<br>le banc d’usure de denture.</p><a href="#accueil">Revenir en haut ↑</a></footer>
+  <dialog id="photo-dialog" aria-labelledby="photo-title"><div class="dialog-top"><p id="photo-title">Détail du banc</p><button id="close-dialog" class="button button-small" type="button">Fermer ×</button></div><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+</body>
+</html>
